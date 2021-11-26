@@ -33,6 +33,24 @@ xlabel('R')
 ylabel('G')
 zlabel('B')
 
+%% Gráfica de la transformación 5 (escala 5)
 
+duration = 1;
+B = linspace(0, duration, (duration)*100000);
+a = 0.2;
+b = 0.8;
+c = 20.0;
+
+R = (a*sin(c*B)+b).*cos(B)./3;
+G = (a*sin(c*B)+b).*sin(B)./3;
+
+map = [R' G' B'];
+
+
+figure, scatter3(map(:,1), map(:,2), map(:,3), 4, map);
+title('Mapeo de colores de la transformación V');
+xlabel('R')
+ylabel('G')
+zlabel('B')
 
 
